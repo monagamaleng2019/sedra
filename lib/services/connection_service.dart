@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/foundation.dart';
 
-class ConnectionService extends ChangeNotifier {
+class ConnectionService with ChangeNotifier {
   Future<bool> checkConnection() async {
     var connectionResult = await Connectivity().checkConnectivity();
 

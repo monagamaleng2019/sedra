@@ -3,7 +3,7 @@ import 'package:sedra/services/connection_service.dart';
 
 class BaseViewModel extends ChangeNotifier {
   final ConnectionService connectionService;
-  BaseViewModel({@required this.connectionService});
+  BaseViewModel({this.connectionService});
 
   bool get isConnected => connectionService.isConnected;
 
