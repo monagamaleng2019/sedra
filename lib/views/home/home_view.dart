@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sedra/repositories/remote_repository.dart';
 import 'package:sedra/services/connection_service.dart';
+import 'package:sedra/services/message_service.dart';
 import 'package:sedra/shared_widgets/logo.dart';
 import 'package:provider/provider.dart';
 import 'package:sedra/views/home/home_view_model.dart';
@@ -13,6 +14,7 @@ class HomeView extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: ChangeNotifierProvider(
           create: (_) => HomeViewModel(
+            messageService: context.read<MessageService>(),
             remoteRepository: context.read<RemoteRepository>(),
             connectionService: context.read<ConnectionService>(),
           ),

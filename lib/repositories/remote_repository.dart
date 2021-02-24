@@ -8,7 +8,7 @@ class RemoteRepository {
   final RequestService _requestService;
   RemoteRepository(@required this._requestService);
 
-  Future<Result> rateApp() async {
+  Future<Result> rateApp({@required rateValue}) async {
     try {
       String path = "";
       var result =
