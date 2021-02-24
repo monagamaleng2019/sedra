@@ -5,6 +5,7 @@ import 'package:sedra/routes/routes_names.dart';
 import 'package:sedra/services/connection_service.dart';
 import 'package:sedra/services/message_service.dart';
 import 'package:sedra/views/base/base_view_model.dart';
+import 'package:sedra/views/home/widgets/subscribe/subscribe_view.dart';
 import 'widgets/rate/rate_view.dart';
 
 class HomeViewModel extends BaseViewModel {
@@ -23,10 +24,7 @@ class HomeViewModel extends BaseViewModel {
 
   void rateAction() => showRateDialoge();
 
-  void subscribeToNotificationAction() {
-    messageService.subscribeToNotificationDialoge(
-        onChanged: null, isValidEmail: null, onSubscribeSubmitted: null);
-  }
+  void subscribeToNotificationAction() => showSubscribeDialoge();
 
   void openhargeControlAction() {}
 }
